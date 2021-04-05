@@ -14,7 +14,7 @@ def browser(request):
     print("\nstart chrome browser for test..")
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-    browser = webdriver.Chrome("/home/user/PycharmProjects/education/chromedriver", options=options)
+    browser = webdriver.Chrome("/home/user/PycharmProjects/chromedriver", options=options)
 
     yield browser
     print("\nquit browser..")
