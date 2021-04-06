@@ -18,3 +18,14 @@ class LoginPageLocators:
     # REGISTER_PASSWORD2 = (By.CSS_SELECTOR, "#id_registration-password2")
     # REGISTER_BUTTON = (By.CSS_SELECTOR, "#registration_submit")
 
+
+class ProductPageLocators:
+    NAME_PRODUCT = (By.XPATH, "//div[contains(@class, 'col-sm-6 product_main')]/h1")
+    PRICE_PRODUCT = (By.CSS_SELECTOR, "p.price_color")
+
+    # button
+    ADD_TO_BASKET = (By.CSS_SELECTOR, 'button[class $="btn-add-to-basket"]')
+
+    # alert
+    ALERT_NAME_PRODUCT = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")
+    ALERT_PRICE_PRODUCT = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
