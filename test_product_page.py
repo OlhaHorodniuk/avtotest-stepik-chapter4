@@ -1,5 +1,3 @@
-import time
-
 import pytest
 
 from pages.product_page import ProductPage
@@ -46,4 +44,14 @@ def test_guest_should_see_login_link_on_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
     page.should_be_login_link()
+
+
+def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/studyguide-for-counter-hack-reloaded_205/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.opening_the_basket()
+    page.check_that_basket_empty()
+    page.check_text_that_basket_empty()
+
 
