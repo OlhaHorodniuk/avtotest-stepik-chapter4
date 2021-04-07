@@ -24,3 +24,14 @@ class ProductPage(BasePage):
         alert_book_price = alert_book_price.text
         assert book_price == alert_book_price, \
             f"The price {book_price} of the book does not match the price in the basket"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ALERT_NAME_PRODUCT), \
+            "Success message for added product is displayed, but should not"
+
+    def should_disappeared_of_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.ALERT_NAME_PRODUCT), \
+            "Success message for added product is displayed, but should not"
+
+
+

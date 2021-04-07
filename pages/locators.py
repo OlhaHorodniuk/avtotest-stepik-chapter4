@@ -29,3 +29,8 @@ class ProductPageLocators:
     # alert
     ALERT_NAME_PRODUCT = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")
     ALERT_PRICE_PRODUCT = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
