@@ -56,7 +56,7 @@ class BasePage:
         assert necessary_text in actual_message, "Basket isn`t empty or text change"
 
     def go_to_login_page(self):
-        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK_INVALID)
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
 
     def is_disappeared(self, how, what, timeout=4):
