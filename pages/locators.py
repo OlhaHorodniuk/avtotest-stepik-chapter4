@@ -39,3 +39,4 @@ class BasketPageLocators:
     TABLE_PRODUCT = (By.CLASS_NAME, 'basket-items')
     MESSAGE_ABOUT_EMPTY_BASKET = (By.XPATH, '//*[@id="content_inner"]/p')
 
+
